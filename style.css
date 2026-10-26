@@ -909,3 +909,19 @@ header {
 .download-back:hover {
     background: #376fa8;
 }
+
+.install-app-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #558DC6;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.install-app-button:hover {
+    background: #376fa8;
+}
