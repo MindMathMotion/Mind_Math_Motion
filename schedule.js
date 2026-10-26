@@ -27,8 +27,8 @@ const availability = {
 // Format: YYYY-MM-DD
 
 const unavailable = {
-    "2026-10-26": ["4:00 PM", "6:00 PM"],
-    "2026-10-27": ["5:00 PM", "7:00 PM"]
+    "2026-10-25": ["4:00 PM", "6:00 PM"],
+    "2026-10-26": ["5:00 PM", "7:00 PM"]
 };
 
 function renderCalendar() {
@@ -67,7 +67,7 @@ function renderCalendar() {
         const button = document.createElement("button");
 
         button.textContent = day;
-        button.disabled = date < today;
+        button.disabled = date <= today;
 
         button.addEventListener("click", () => {
             if (selectedButton) {
