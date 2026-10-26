@@ -27,7 +27,7 @@ const availability = {
 // Format: YYYY-MM-DD
 
 const unavailable = {
-    "2026-10-25": ["4:00 PM", "6:00 PM"],
+    "2026-10-27": ["4:00 PM", "6:00 PM"],
     "2026-10-26": ["5:00 PM", "7:00 PM"]
 };
 
