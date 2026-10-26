@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Schedule a Session | Mind Math Motion</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Mind Math Motion</h1>
+            <p>From Curiosity to Creation</p>
+        </div>
+
+        <a href="index.html" class="logo-link">
+            <img
+                src="logo.png"
+                alt="Mind Math Motion Logo"
+                class="header-logo"
+            >
+        </a>
+    </header>
+
+    <main class="schedule-page">
+        <a class="button home-button" href="index.html">
+            ← Home
+        </a>
+
+        <h2>Select a Date</h2>
+        <p>Choose a date to see available sessions.</p>
+
+        <div class="calendar-controls">
+            <button id="prevMonth" type="button">‹</button>
+            <h3 id="monthTitle"></h3>
+            <button id="nextMonth" type="button">›</button>
+        </div>
+
+        <div class="calendar" id="calendar"></div>
+
+        
+        <section id="timeSection">
+            <h2 id="selectedDate">Select a day</h2>
+            <div class="time-slots" id="timeSlots"></div>
+        </section>
+
+        <section id="bookingSection" hidden>
+            <h2>Request a Booking</h2>
+
+            <p id="bookingMessage"></p>
+
+            <form id="bookingForm">
+                <label for="studentName">Name</label>
+                <input
+                    type="text"
+                    id="studentName"
+                    name="name"
+                    required
+                >
+
+                <label for="studentEmail">Email</label>
+                <input
+                    type="email"
+                    id="studentEmail"
+                    name="email"
+                    required
+                >
+
+                <label for="studentMessage">Message (optional)</label>
+                <textarea
+                    id="studentMessage"
+                    name="message"
+                    rows="4"
+                ></textarea>
+
+                <button class="button" type="submit">
+                    Request Booking
+                </button>
+            </form>
+
+            <p id="formStatus" role="status"></p>
+        </section>
+
+    </main>
+
+    <script src="schedule.js"></script>
+</body>
+
+
+<form action="https://formspree.io/f/YOUR_FORM_ID"
+      method="POST">
+
+    <label for="studentName">Name</label>
+    <input id="studentName" type="text"
+           name="name" required>
+
+    <label for="studentEmail">Email</label>
+    <input id="studentEmail" type="email"
+           name="email" required>
+
+    <input type="hidden" name="date" id="bookingDate">
+    <input type="hidden" name="time" id="bookingTime">
+
+    <button type="submit">
+        Request Booking
+    </button>
+</form>
+
+</html>
