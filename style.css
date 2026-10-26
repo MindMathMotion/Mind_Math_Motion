@@ -895,3 +895,17 @@ header {
         right: 10px;
     }
 }
+
+
+.download-back {
+    display: inline-block;
+    padding: 13px 28px;
+    background: #558DC6;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.download-back:hover {
+    background: #376fa8;
+}
