@@ -31,6 +31,12 @@ const unavailable = {
     "2026-10-26": ["5:00 PM", "7:00 PM"]
 };
 
+Object.keys(unavailable).forEach(dateKey => {
+    if (dateKey < formatDateKey(today)) {
+        delete unavailable[dateKey];
+    }
+});
+
 function renderCalendar() {
     calendar.innerHTML = "";
     timeSlots.innerHTML = "";
