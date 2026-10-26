@@ -36,3 +36,28 @@ function copyContact(buttonId, value) {
 
 copyContact("copyPhone", "6047886814");
 copyContact("copyEmail", "math.mind.motion@gmail.com");
+
+let deferredInstallPrompt;
+
+const installButton = document.getElementById("installApp");
+
+window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    deferredInstallPrompt = event;
+    installButton.hidden = false;
+});
+
+installButton.addEventListener("click", async () => {
+    if (!deferredInstallPrompt) return;
+
+    deferredInstallPrompt.prompt();
+    await deferredInstallPrompt.userChoice;
+
+    deferredInstallPrompt = null;
+    installButton.hidden = true;
+});
+
+window.addEventListener("appinstalled", () => {
+    installButton.hidden = true;
+    deferredInstallPrompt = null;
+});
